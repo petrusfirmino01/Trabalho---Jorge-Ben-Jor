@@ -21,37 +21,38 @@
     <h1>Carreira.</h1>
     <h3>Jorge Ben Jor começou sua carreira musical em 1959, quando lançou seu primeiro disco, "Samba Esquema Novo". Desde então, ele se tornou um dos artistas mais influentes da música brasileira, com uma carreira que abrange mais de seis décadas. Ele é conhecido por suas letras poéticas e ritmos contagiantes, que conquistaram fãs em todo o mundo.</h3>
 </div>
-<div class="bloco-texto">
-    <h1>Samba Esquema Novo.</h1>
-
-    <h4>
-        <ul>
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/69166/">"Mas, que Nada!"</a></li>
-
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/805880/">"Tim, Dom, Dom"</a></li>
-
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86084/">"Balança Pema"</a></li>
-  
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86455/">"Vem, Morena, Vem"</a></li>
-  
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/46643/">"Chove Chuva"</a></li>
-  
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86456/">"É Só Sambar"</a></li> 
-  
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86457/">"Rosa, Menina Rosa"</a></li>
-  
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86458/">"Quero Esquecer Você"</a></li>
- 
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86459/">"Uala Uala-la"</a></li>
-
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86460/">"A Tamba"</a></li>
-
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/86463/">"Menina Bonita Não Chora"</a></li>
-
-  <li><a href="https://www.letras.mus.br/jorge-ben-jor/46648/">"Por Causa de Você Menina"</a></li>
-        </ul>
-    </h4>
+<div class="bloco-texto3">
+    <h1>Conheça uma das musicas do albun Samba Esquema Novo.</h1>
+    <button id="musica-aleatoria-btn" class="btn-link" type="button">Mostrar um link</button>
+    <div id="musica-aleatoria-output" class="link-output"></div>
 </div>
+
+<script>
+    const links = [
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/69166/', text: 'Mas, que Nada!' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/805880/', text: 'Tim, Dom, Dom' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86084/', text: 'Balança Pema' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86455/', text: 'Vem, Morena, Vem' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/46643/', text: 'Chove Chuva' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86456/', text: 'É Só Sambar' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86457/', text: 'Rosa, Menina Rosa' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86458/', text: 'Quero Esquecer Você' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86459/', text: 'Uala Uala-la' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86460/', text: 'A Tamba' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/86463/', text: 'Menina Bonita Não Chora' },
+        { url: 'https://www.letras.mus.br/jorge-ben-jor/46648/', text: 'Por Causa de Você Menina' }
+    ];
+
+    const buttonElement = document.getElementById('musica-aleatoria-btn');
+    const outputElement = document.getElementById('musica-aleatoria-output');
+
+    buttonElement.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * links.length);
+        const randomLink = links[randomIndex];
+
+        outputElement.innerHTML = `<a href="${randomLink.url}" target="_blank" rel="noopener noreferrer">Conhecer "${randomLink.text}"</a>`;
+    });
+</script>
 
 </body>
 </html>
